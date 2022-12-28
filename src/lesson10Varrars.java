@@ -6,32 +6,53 @@ import java.util.Scanner;
 public class lesson10Varrars {
 
     public static void main(String[] args) {
-        //System.out.println(summ(1,2,3,4,5,6,7));
-        String[] names = {"Name 1","Name 2","Name 3"};
-        name(names);
+
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Дайте тринг!");
-        String s =  sc.nextLine();
+        System.out.println("Напишите код, который будет\n" +
+                "запрашивать слово из консоли.\n" +
+                "Создайте метод и передайте слово\n" +
+                "которое получите из консоли в параметр метода\n" +
+                "Метод должен превратить все буквы в\n" +
+                "слове на заглавные и убрать все лишние\n" +
+                "пробелы в слове.\n" +
+                "Если в слове содержится буква «А» то\n" +
+                "метод должен обрезать слово до букв «А»\n" +
+                "и вернуть его.\n" +
+                "Если слово не содержит букву «А» то\n" +
+                "должен вернуть сообщение что слово «Не\n" +
+                "содержит».\n"+
+                "запрашивать слово из консоли.");
+        System.out.print("Дайте cтринг!: ");
+        String s = sc.nextLine();
         SozBol(s);
     }
 
 
 
     static void SozBol(String s){
+        System.out.println("Первая задача успешно!");
         System.out.println(s.toUpperCase());
+        System.out.println("Втарая задача успешно!");
         System.out.println(s.trim());
-        System.out.println();
+        System.out.println("Третая задача успешно!");
+        char[] c =s.toCharArray();
+        int index = 0;
+        for (int i = 0; i< c.length; i++) {
+            index++;
+            if (s.contains("А") || s.contains("A")) {
+                if (c[i] == 'А'|| c[i] == 'A') {
+                    System.out.println(s.substring(index));
+                }
+            } else  {
 
-        System.out.println(s.contains("A"));
-        for (int i = 0; i < s.length(); i++) {
-            if (s.contains("A")==false){
-                System.out.println(s.substring(i));
-            } else {
-                System.out.println("Жок");
+                System.out.println("Четвертая задача успешно!");
+                System.out.println("Жок!");
             }
-       }
-     }
+
+            }
+
+        }
 
     static void name(String...name){
         for (String a: name
